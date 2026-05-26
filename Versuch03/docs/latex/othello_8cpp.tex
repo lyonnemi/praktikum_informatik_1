@@ -1,0 +1,231 @@
+\doxysection{othello.\+cpp File Reference}
+\hypertarget{othello_8cpp}{}\label{othello_8cpp}\index{othello.cpp@{othello.cpp}}
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include "{}config.\+h"{}}\newline
+{\ttfamily \+\#include "{}test.\+h"{}}\newline
+{\ttfamily \+\#include "{}othello\+KI.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{othello_8cpp_a5c2aa50af4bb13bc589b835e1c1473bc}{initialisiere\+Spielfeld}} (int spielfeld\+[\doxymbox{\hyperlink{config_8h_a6e8c64412a620a46fbadb6bbf2df47fe}{GROESSE\+\_\+Y}}]\+\+[\doxymbox{\hyperlink{config_8h_a091c112fc29d1116c224f3d4c0fa7455}{GROESSE\+\_\+X}}]\+)
+\begin{DoxyCompactList}\small\item\em Funktion zur ersten Initialisierung eines neuen Spielfelds. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{othello_8cpp_ace1027b2745225e26a5ffb243cf24a15}{zeige\+Spielfeld}} (const int spielfeld\+[\doxymbox{\hyperlink{config_8h_a6e8c64412a620a46fbadb6bbf2df47fe}{GROESSE\+\_\+Y}}]\+\+[\doxymbox{\hyperlink{config_8h_a091c112fc29d1116c224f3d4c0fa7455}{GROESSE\+\_\+X}}]\+)
+\begin{DoxyCompactList}\small\item\em Ausgabe des Spielfelds auf der Konsole. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{othello_8cpp_ab5b9afa274ecde39b15429f5fc77b59e}{gewinner}} (const int spielfeld\+[\doxymbox{\hyperlink{config_8h_a6e8c64412a620a46fbadb6bbf2df47fe}{GROESSE\+\_\+Y}}]\+\+[\doxymbox{\hyperlink{config_8h_a091c112fc29d1116c224f3d4c0fa7455}{GROESSE\+\_\+X}}]\+)
+\begin{DoxyCompactList}\small\item\em Prueft, wer Gewinner ist. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{othello_8cpp_a6ded08a0017d5e8a5909d8ce403058fa}{auf\+Spielfeld}} (const int posX, const int posY)
+\begin{DoxyCompactList}\small\item\em Ueberprueft fuer zwei Indizes, ob sie auf dem Spielfeld sind. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{othello_8cpp_a0f17ff75622987b979767417e76164a0}{zug\+Gueltig}} (const int spielfeld\+[\doxymbox{\hyperlink{config_8h_a6e8c64412a620a46fbadb6bbf2df47fe}{GROESSE\+\_\+Y}}]\+\+[\doxymbox{\hyperlink{config_8h_a091c112fc29d1116c224f3d4c0fa7455}{GROESSE\+\_\+X}}]\+, const int aktueller\+Spieler, const int posX, const int posY)
+\begin{DoxyCompactList}\small\item\em Ueberprueft fuer zwei Indizes, ob der Zug gueltig ist. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{othello_8cpp_a7034afa60f015a8ab6c0b836d316d4a4}{zug\+Ausfuehren}} (int spielfeld\+[\doxymbox{\hyperlink{config_8h_a6e8c64412a620a46fbadb6bbf2df47fe}{GROESSE\+\_\+Y}}]\+\+[\doxymbox{\hyperlink{config_8h_a091c112fc29d1116c224f3d4c0fa7455}{GROESSE\+\_\+X}}]\+, const int aktueller\+Spieler, const int posX, const int posY)
+\begin{DoxyCompactList}\small\item\em Funktion, die einen Zug ausfuehrt. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{othello_8cpp_a8cf3121558de67463e88957becd116d1}{moegliche\+Zuege}} (const int spielfeld\+[\doxymbox{\hyperlink{config_8h_a6e8c64412a620a46fbadb6bbf2df47fe}{GROESSE\+\_\+Y}}]\+\+[\doxymbox{\hyperlink{config_8h_a091c112fc29d1116c224f3d4c0fa7455}{GROESSE\+\_\+X}}]\+, const int aktueller\+Spieler)
+\begin{DoxyCompactList}\small\item\em Funktion zur Berechnung der möglichen Züge für einen Spieler. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{othello_8cpp_ae44cf481fe71ebc30511c76190e6bc5d}{menschlicher\+Zug}} (int spielfeld\+[\doxymbox{\hyperlink{config_8h_a6e8c64412a620a46fbadb6bbf2df47fe}{GROESSE\+\_\+Y}}]\+\+[\doxymbox{\hyperlink{config_8h_a091c112fc29d1116c224f3d4c0fa7455}{GROESSE\+\_\+X}}]\+, const int aktueller\+Spieler)
+\begin{DoxyCompactList}\small\item\em Erlauben eines menschlichen Zuges. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{othello_8cpp_a596345e24a803c4d6cc0880cdd9c6788}{spielen}} (const int spieler\+Typ\+[2]\+)
+\begin{DoxyCompactList}\small\item\em Funktion zum Spielen des Spiels. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{othello_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Hauptfunktion des Spiels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Praktikum Informatik 1
+
+Die Funktionen fuer das Spiel Othello 
+
+\label{othello_8cpp_doc-func-members}
+\Hypertarget{othello_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{othello_8cpp_a6ded08a0017d5e8a5909d8ce403058fa}\index{othello.cpp@{othello.cpp}!aufSpielfeld@{aufSpielfeld}}
+\index{aufSpielfeld@{aufSpielfeld}!othello.cpp@{othello.cpp}}
+\doxysubsubsection{\texorpdfstring{aufSpielfeld()}{aufSpielfeld()}}
+{\footnotesize\ttfamily \label{othello_8cpp_a6ded08a0017d5e8a5909d8ce403058fa} 
+bool auf\+Spielfeld (\begin{DoxyParamCaption}\item[{const int}]{posX}{, }\item[{const int}]{posY}{}\end{DoxyParamCaption})}
+
+
+
+Ueberprueft fuer zwei Indizes, ob sie auf dem Spielfeld sind. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em posX} & Index fuer die Spalte \\
+\hline
+{\em posY} & Index fuer die Zeile \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, wenn Spalte und Zeile innerhalb des Spielfelds sind, sonst false 
+\end{DoxyReturn}
+\Hypertarget{othello_8cpp_ab5b9afa274ecde39b15429f5fc77b59e}\index{othello.cpp@{othello.cpp}!gewinner@{gewinner}}
+\index{gewinner@{gewinner}!othello.cpp@{othello.cpp}}
+\doxysubsubsection{\texorpdfstring{gewinner()}{gewinner()}}
+{\footnotesize\ttfamily \label{othello_8cpp_ab5b9afa274ecde39b15429f5fc77b59e} 
+int gewinner (\begin{DoxyParamCaption}\item[{const int}]{spielfeld}{\+[\+GROESSE\+\_\+\+Y]\+\+[\+GROESSE\+\_\+\+X]\+}\end{DoxyParamCaption})}
+
+
+
+Prueft, wer Gewinner ist. 
+
+Zaehlt alle Steine auf dem Feld
+
+
+\begin{DoxyParams}{Parameters}
+{\em spielfeld} & Aktuelles Spielfeld, fuer das der Gewinner ermittelt wird \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+winner 
+\end{DoxyReturn}
+\Hypertarget{othello_8cpp_a5c2aa50af4bb13bc589b835e1c1473bc}\index{othello.cpp@{othello.cpp}!initialisiereSpielfeld@{initialisiereSpielfeld}}
+\index{initialisiereSpielfeld@{initialisiereSpielfeld}!othello.cpp@{othello.cpp}}
+\doxysubsubsection{\texorpdfstring{initialisiereSpielfeld()}{initialisiereSpielfeld()}}
+{\footnotesize\ttfamily \label{othello_8cpp_a5c2aa50af4bb13bc589b835e1c1473bc} 
+void initialisiere\+Spielfeld (\begin{DoxyParamCaption}\item[{int}]{spielfeld}{\+[\+GROESSE\+\_\+\+Y]\+\+[\+GROESSE\+\_\+\+X]\+}\end{DoxyParamCaption})}
+
+
+
+Funktion zur ersten Initialisierung eines neuen Spielfelds. 
+
+Diese Funktion fuellt ein existierendes Spielfeld mit Nullen und erzeugt die Startaufstellung.
+
+
+\begin{DoxyParams}{Parameters}
+{\em spielfeld} & Spielfeld, das initialisiert wird \\
+\hline
+\end{DoxyParams}
+\Hypertarget{othello_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{othello.cpp@{othello.cpp}!main@{main}}
+\index{main@{main}!othello.cpp@{othello.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{othello_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Hauptfunktion des Spiels. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\Hypertarget{othello_8cpp_ae44cf481fe71ebc30511c76190e6bc5d}\index{othello.cpp@{othello.cpp}!menschlicherZug@{menschlicherZug}}
+\index{menschlicherZug@{menschlicherZug}!othello.cpp@{othello.cpp}}
+\doxysubsubsection{\texorpdfstring{menschlicherZug()}{menschlicherZug()}}
+{\footnotesize\ttfamily \label{othello_8cpp_ae44cf481fe71ebc30511c76190e6bc5d} 
+bool menschlicher\+Zug (\begin{DoxyParamCaption}\item[{int}]{spielfeld}{\+[\+GROESSE\+\_\+\+Y]\+\+[\+GROESSE\+\_\+\+X]\+, }\item[{const int}]{aktueller\+Spieler}{}\end{DoxyParamCaption})}
+
+
+
+Erlauben eines menschlichen Zuges. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spielfeld} & Das aktuelle Spielfeld \\
+\hline
+{\em aktueller\+Spieler} & Der aktuelle Spieler \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, wenn der Zug erfolgreich war 
+
+false, wenn der Zug nicht erfolgreich war 
+\end{DoxyReturn}
+\Hypertarget{othello_8cpp_a8cf3121558de67463e88957becd116d1}\index{othello.cpp@{othello.cpp}!moeglicheZuege@{moeglicheZuege}}
+\index{moeglicheZuege@{moeglicheZuege}!othello.cpp@{othello.cpp}}
+\doxysubsubsection{\texorpdfstring{moeglicheZuege()}{moeglicheZuege()}}
+{\footnotesize\ttfamily \label{othello_8cpp_a8cf3121558de67463e88957becd116d1} 
+int moegliche\+Zuege (\begin{DoxyParamCaption}\item[{const int}]{spielfeld}{\+[\+GROESSE\+\_\+\+Y]\+\+[\+GROESSE\+\_\+\+X]\+, }\item[{const int}]{aktueller\+Spieler}{}\end{DoxyParamCaption})}
+
+
+
+Funktion zur Berechnung der möglichen Züge für einen Spieler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spielfeld} & Das aktuelle Spielfeld \\
+\hline
+{\em aktueller\+Spieler} & Der aktuelle Spieler \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Die Anzahl der möglichen Züge 
+\end{DoxyReturn}
+\Hypertarget{othello_8cpp_a596345e24a803c4d6cc0880cdd9c6788}\index{othello.cpp@{othello.cpp}!spielen@{spielen}}
+\index{spielen@{spielen}!othello.cpp@{othello.cpp}}
+\doxysubsubsection{\texorpdfstring{spielen()}{spielen()}}
+{\footnotesize\ttfamily \label{othello_8cpp_a596345e24a803c4d6cc0880cdd9c6788} 
+void spielen (\begin{DoxyParamCaption}\item[{const int}]{spieler\+Typ}{\+[2]\+}\end{DoxyParamCaption})}
+
+
+
+Funktion zum Spielen des Spiels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spieler\+Typ} & /\+/\+ Feld, das Informationen ueber den Typ des Spielers enthaelt. MENSCH(=1) oder COPMUTER(=2) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{othello_8cpp_ace1027b2745225e26a5ffb243cf24a15}\index{othello.cpp@{othello.cpp}!zeigeSpielfeld@{zeigeSpielfeld}}
+\index{zeigeSpielfeld@{zeigeSpielfeld}!othello.cpp@{othello.cpp}}
+\doxysubsubsection{\texorpdfstring{zeigeSpielfeld()}{zeigeSpielfeld()}}
+{\footnotesize\ttfamily \label{othello_8cpp_ace1027b2745225e26a5ffb243cf24a15} 
+void zeige\+Spielfeld (\begin{DoxyParamCaption}\item[{const int}]{spielfeld}{\+[\+GROESSE\+\_\+\+Y]\+\+[\+GROESSE\+\_\+\+X]\+}\end{DoxyParamCaption})}
+
+
+
+Ausgabe des Spielfelds auf der Konsole. 
+
+Ausgabe des aktuellen Spielfelds, 0 bedeutet leeres Feld, 1 ist Spieler 1 und 2 ist Spieler2 Kreuze symbolisieren Spieler 1, waehrend Kreise Spieler 2 symbolisieren
+
+
+\begin{DoxyParams}{Parameters}
+{\em spielfeld} & Spielfeld, das ausgeben wird \\
+\hline
+\end{DoxyParams}
+\Hypertarget{othello_8cpp_a7034afa60f015a8ab6c0b836d316d4a4}\index{othello.cpp@{othello.cpp}!zugAusfuehren@{zugAusfuehren}}
+\index{zugAusfuehren@{zugAusfuehren}!othello.cpp@{othello.cpp}}
+\doxysubsubsection{\texorpdfstring{zugAusfuehren()}{zugAusfuehren()}}
+{\footnotesize\ttfamily \label{othello_8cpp_a7034afa60f015a8ab6c0b836d316d4a4} 
+void zug\+Ausfuehren (\begin{DoxyParamCaption}\item[{int}]{spielfeld}{\+[\+GROESSE\+\_\+\+Y]\+\+[\+GROESSE\+\_\+\+X]\+, }\item[{const int}]{aktueller\+Spieler}{, }\item[{const int}]{posX}{, }\item[{const int}]{posY}{}\end{DoxyParamCaption})}
+
+
+
+Funktion, die einen Zug ausfuehrt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em spielfeld} & Das aktuelle Spielfeld \\
+\hline
+{\em aktueller\+Spieler} & Der aktuelle Spieler \\
+\hline
+{\em posX} & Die aktuelle Spalte \\
+\hline
+{\em posY} & Die aktuelle Zeile \\
+\hline
+\end{DoxyParams}
+\Hypertarget{othello_8cpp_a0f17ff75622987b979767417e76164a0}\index{othello.cpp@{othello.cpp}!zugGueltig@{zugGueltig}}
+\index{zugGueltig@{zugGueltig}!othello.cpp@{othello.cpp}}
+\doxysubsubsection{\texorpdfstring{zugGueltig()}{zugGueltig()}}
+{\footnotesize\ttfamily \label{othello_8cpp_a0f17ff75622987b979767417e76164a0} 
+bool zug\+Gueltig (\begin{DoxyParamCaption}\item[{const int}]{spielfeld}{\+[\+GROESSE\+\_\+\+Y]\+\+[\+GROESSE\+\_\+\+X]\+, }\item[{const int}]{aktueller\+Spieler}{, }\item[{const int}]{posX}{, }\item[{const int}]{posY}{}\end{DoxyParamCaption})}
+
+
+
+Ueberprueft fuer zwei Indizes, ob der Zug gueltig ist. 
+
+Ueberprueft, ob auf einem benachbarten Feld ein gegnerischer Stein liegt. Wenn ja, wird diese Richtung solange untersucht, bis ein eigener Stein gefunden wird. Wird vorher der Spielfeldrand erreicht oder ein leeres Feld gefunden, wird false zurueckgegeben, sonst true
+
+
+\begin{DoxyParams}{Parameters}
+{\em spielfeld} & Das aktuelle Spielfeld \\
+\hline
+{\em aktueller\+Spieler} & Der aktuelle Spieler \\
+\hline
+{\em posX} & Zu ueberpruefende Spalte \\
+\hline
+{\em posY} & Zu ueberpruefende Zeile \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
