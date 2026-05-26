@@ -31,7 +31,7 @@ int main()
         studentenListe.pushBack(student);
         student = Student(64567, "Paula Peters", "9.01.1981", "Weidenweg 12");
         studentenListe.pushBack(student);
-        student = Student(23456, "Walter Rodenstock", "15.10.1963", "W�llnerstr.9");
+        student = Student(23456, "Walter Rodenstock", "15.10.1963", "W�llnerstr.9");
         studentenListe.pushBack(student);
     }
 
@@ -42,6 +42,9 @@ int main()
                   << "(1): Datenelement hinten hinzufuegen" << std::endl
                   << "(2): Datenelement vorne entfernen" << std::endl
                   << "(3): Datenbank ausgeben" << std::endl
+                  << "(4): Datenbank in umgekehrter Reihenfolge ausgeben" << std::endl
+                  << "(5): Datenelement löschen" << std::endl
+                  << "(6): Datenelement vorne hinzufügen" << std::endl
                   << "(0): Beenden" << std::endl;
         std::cin >> abfrage;
         std::cin.ignore(10, '\n');
@@ -56,7 +59,7 @@ int main()
                     std::string geburtstag = "";
                     std::string adresse = "";
 
-                    std::cout << "Bitte geben sie die Daten f�r den Studenten ein.\nName: ";
+                    std::cout << "Bitte geben sie die Daten f�r den Studenten ein.\nName: ";
                     getline(std::cin, name);    // ganze Zeile einlesen inklusive aller Leerzeichen
 
                     std::cout << "Geburtsdatum: ";
@@ -104,7 +107,74 @@ int main()
                     std::cout << "Die Liste ist leer!\n\n";
                 }
                 break;
+            // Datenbank rueckwaerts ausgeben
+            case '4':
+                if(!studentenListe.empty())
+                {
+                    std::cout << "Inhalt der Liste in umgekehrter Reihenfolge:" << std::endl;
+                    studentenListe.ausgabeRueckwaerts();
+                 }
+                else
+                {
+                    std::cout << "Die Liste ist leer!\n\n";
+                }
+                break;
 
+            // Datenelement löschen
+            case '5':
+                {
+                    int matrikelnummer;
+
+                    std::cout << "Geben Sie die Matrikelnummer des Studenten ein, der gelöscht werden soll: ";
+                    std::cin >> matrikelnummer;
+
+                    Liste copyList = studentenListe; // Kopie der Liste erstellen, damit die Original-Liste nicht verändert wird
+                    Liste newList = Liste(); 
+                    bool found = false;
+                    while (!copyList.empty()){
+                        Student currentStudent = copyList.dataFront();
+                        if (currentStudent.getMatNr() != matrikelnummer){
+                            newList.pushBack(currentStudent);
+                        }else{
+                            std::cout << "Der folgende Student ist geloescht worden:" << std::endl;
+                            currentStudent.ausgabe();
+                            found = true;
+                        }
+                        copyList.popFront();
+                    }
+                    if (!found){
+                        std::cout << "Es wurde kein Student mit der Matrikelnummer " << matrikelnummer << " gefunden.\n";
+                    }
+                    studentenListe = newList;
+                     // copyList and newList are stack objects, no need to delete
+                     break;
+                 }
+
+            // Datenelement vorne hinzufügen
+            case '6':
+                {
+                    unsigned int matNr = 0;
+                    std::string name = "";
+                    std::string geburtstag = "";
+                    std::string adresse = "";
+
+                    std::cout << "Bitte geben sie die Daten f�r den Studenten ein.\nName: ";
+                    getline(std::cin, name);    // ganze Zeile einlesen inklusive aller Leerzeichen
+
+                    std::cout << "Geburtsdatum: ";
+                    getline(std::cin, geburtstag);
+
+                    std::cout << "Adresse: ";
+                    getline(std::cin, adresse);
+
+                    std::cout << "Matrikelnummer: ";
+                    std::cin >> matNr;
+                    std::cin.ignore(10, '\n');
+
+                    student = Student(matNr, name, geburtstag, adresse);
+                    studentenListe.pushFront(student);
+                }
+                break;
             case '0':
                 std::cout << "Das Programm wird nun beendet";
                 break;

@@ -28,8 +28,27 @@ void Liste::pushBack(Student pData)
     }
     else
     {
+        neuesElement->setPrev(back);
         back->setNext(neuesElement);
         back = neuesElement;
+    }
+}
+
+void Liste::pushFront(Student pData)
+{
+    ListenElement* neuesElement = new ListenElement(pData, nullptr);
+
+    if (front == nullptr)                                       // Liste leer?
+    {
+        front = neuesElement;
+        back = neuesElement;
+    }
+    else
+    {
+        neuesElement->setNext(front);
+        neuesElement->setPrev(nullptr);
+        front->setPrev(neuesElement);
+        front = neuesElement;
     }
 }
 
@@ -42,15 +61,17 @@ void Liste::popFront()
 {
     ListenElement* cursor = front;
 
-    if (front == back)                                       // Liste enthält nur ein Listenelement
+    if (front == back)                                       // Liste enthï¿½lt nur ein Listenelement
     {
-        delete front;                                        // Listenelement löschen
+        delete front;                                        // Listenelement lï¿½schen
         front = nullptr;
         back = nullptr;
     }
     else
     {
         front = front->getNext();
+        cursor->setNext(nullptr);                             // Zeiger des zu lÃ¶schenden Listenelements auf nullptr setzen
+        front->setPrev(nullptr);                              // Zeiger des neuen ersten Elements auf nullptr setzen
         delete cursor;
     }
 }
@@ -79,6 +100,7 @@ Student Liste::dataFront()
     return front->getData();
 }
 
+
 /**
  * @brief Ausgabe der Liste vom ersten bis zum letzten Element.
  *
@@ -92,5 +114,21 @@ void Liste::ausgabeVorwaerts() const
     {
     	cursor->getData().ausgabe();
         cursor = cursor->getNext();
+    }
+}
+
+/**
+ * @brief Gibt die Daten des letzten Listenelements in der Liste zurueck
+ * 
+ */
+
+void Liste::ausgabeRueckwaerts() const
+{
+    ListenElement* cursor = back;
+
+    while (cursor != nullptr)
+    {
+    	cursor->getData().ausgabe();
+        cursor = cursor->getPrev();
     }
 }

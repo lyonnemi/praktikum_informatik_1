@@ -36,6 +36,16 @@ void ListenElement::setNext(ListenElement* pNext)
 }
 
 /**
+ * @brief Fuegt einen Zeiger auf das vorherige Listenelement ein
+ * 
+ * @param pPrev 
+ */
+void ListenElement::setPrev(ListenElement* pPrev)
+{
+    prev = pPrev;
+}
+
+/**
  * @brief Gibt ein Objekt der Klasse Student zurueck
  *
  * @return Ein Zeiger auf ein Objekt der Klasse Student
@@ -54,3 +64,15 @@ ListenElement* ListenElement::getNext() const
 {
     return next;
 }
+
+
+/**
+ * @brief Gibt einen Zeiger auf das vorherige Listenelement zurueck
+ * 
+ */
+
+ListenElement* ListenElement::getPrev() const
+{   
+    return prev;
+}   
+

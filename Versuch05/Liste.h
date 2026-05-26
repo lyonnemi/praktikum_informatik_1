@@ -19,10 +19,12 @@ private:
 public:
     Liste();                                                     // Konstruktor mit Zeigerinitialisierung
     void pushBack(Student pData);
+    void pushFront(Student pData);
     void popFront();
     bool empty();
     Student dataFront();
     void ausgabeVorwaerts() const;
+    void ausgabeRueckwaerts() const;
 };
 
 #endif /*LISTE_H_*/
