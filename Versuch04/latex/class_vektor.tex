@@ -1,0 +1,158 @@
+\doxysection{Vektor Class Reference}
+\hypertarget{class_vektor}{}\label{class_vektor}\index{Vektor@{Vektor}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_vektor_a744b4980d331af082c08890ff2e4a857}{Vektor}} (double x, double y, double z)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_vektor}{Vektor}:\+:\+ \doxylink{class_vektor}{Vektor} object. \end{DoxyCompactList}\item 
+\Hypertarget{class_vektor_a66e8e932c4e2df23b5a1d4c4764ce9d2}\label{class_vektor_a66e8e932c4e2df23b5a1d4c4764ce9d2} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Vektor} ()
+\begin{DoxyCompactList}\small\item\em Destruktor der Klasse \doxylink{class_vektor}{Vektor}. \end{DoxyCompactList}\item 
+\Hypertarget{class_vektor_af9ab06975d8cf9c27291b5c9dcf8567f}\label{class_vektor_af9ab06975d8cf9c27291b5c9dcf8567f} 
+void {\bfseries setX} (double inX)
+\item 
+\Hypertarget{class_vektor_a56aa9415017e7114a4af6bb675d4a228}\label{class_vektor_a56aa9415017e7114a4af6bb675d4a228} 
+void {\bfseries setY} (double inY)
+\item 
+\Hypertarget{class_vektor_a544cfea17e6ad2e0e0155663aef4ad1e}\label{class_vektor_a544cfea17e6ad2e0e0155663aef4ad1e} 
+void {\bfseries setZ} (double inZ)
+\item 
+\Hypertarget{class_vektor_ad1864a78b96956dc7f504bba9b39af45}\label{class_vektor_ad1864a78b96956dc7f504bba9b39af45} 
+double {\bfseries getX} () const
+\item 
+\Hypertarget{class_vektor_a93d6584667064c7e3abc9d42b529db93}\label{class_vektor_a93d6584667064c7e3abc9d42b529db93} 
+double {\bfseries getY} () const
+\item 
+\Hypertarget{class_vektor_aaef4681c5b2ce1348685eb4cd89bd9b2}\label{class_vektor_aaef4681c5b2ce1348685eb4cd89bd9b2} 
+double {\bfseries getZ} () const
+\item 
+\Hypertarget{class_vektor_aa3c41759f0a472327a8970878234675a}\label{class_vektor_aa3c41759f0a472327a8970878234675a} 
+void {\bfseries ausgabe} () const
+\begin{DoxyCompactList}\small\item\em Function printing the components of the vector. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_vektor}{Vektor}} \doxymbox{\hyperlink{class_vektor_a9e095d5d627ad26c7c2d6f227567e731}{sub}} (const \doxymbox{\hyperlink{class_vektor}{Vektor}} \&input) const
+\begin{DoxyCompactList}\small\item\em Funktion, die die Differenz zweier Vektoren berechnet. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_vektor_a7e0b4c5110595bc81c8824e735af99aa}{laenge}} () const
+\begin{DoxyCompactList}\small\item\em Funktion, die die Länge eines Vektors berechnet. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_vektor_a5c2887f0690d9ffd1bba0a16bd8cc477}{skalar\+Prod}} (const \doxymbox{\hyperlink{class_vektor}{Vektor}} \&input) const
+\begin{DoxyCompactList}\small\item\em Funktion, die das Skalarprodukt zweier Vektoren berechnet. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_vektor_a66d1f47d9c7f6d985f39e9f34fb3f0d5}{winkel}} (const \doxymbox{\hyperlink{class_vektor}{Vektor}} \&input) const
+\begin{DoxyCompactList}\small\item\em Funktion, die den Winkel zwischen zwei Vektoren berechnet. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_vektor_a578a23f6efefcd0b038609bdcb9a7f7b}{rotiere\+UmZ}} (const double rad)
+\begin{DoxyCompactList}\small\item\em Funktion, die einen \doxylink{class_vektor}{Vektor} um die Z-\/\+Achse rotiert. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{class_vektor_doc-constructors}
+\Hypertarget{class_vektor_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_vektor_a744b4980d331af082c08890ff2e4a857}\index{Vektor@{Vektor}!Vektor@{Vektor}}
+\index{Vektor@{Vektor}!Vektor@{Vektor}}
+\doxysubsubsection{\texorpdfstring{Vektor()}{Vektor()}}
+{\footnotesize\ttfamily \label{class_vektor_a744b4980d331af082c08890ff2e4a857} 
+Vektor::\+\+Vektor (\begin{DoxyParamCaption}\item[{double}]{inX}{, }\item[{double}]{inY}{, }\item[{double}]{inZ}{}\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_vektor}{Vektor}:\+:\+ \doxylink{class_vektor}{Vektor} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inX} & \\
+\hline
+{\em inY} & \\
+\hline
+{\em inZ} & \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_vektor_doc-func-members}
+\Hypertarget{class_vektor_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_vektor_a7e0b4c5110595bc81c8824e735af99aa}\index{Vektor@{Vektor}!laenge@{laenge}}
+\index{laenge@{laenge}!Vektor@{Vektor}}
+\doxysubsubsection{\texorpdfstring{laenge()}{laenge()}}
+{\footnotesize\ttfamily \label{class_vektor_a7e0b4c5110595bc81c8824e735af99aa} 
+double Vektor::\+laenge (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Funktion, die die Länge eines Vektors berechnet. 
+
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\Hypertarget{class_vektor_a578a23f6efefcd0b038609bdcb9a7f7b}\index{Vektor@{Vektor}!rotiereUmZ@{rotiereUmZ}}
+\index{rotiereUmZ@{rotiereUmZ}!Vektor@{Vektor}}
+\doxysubsubsection{\texorpdfstring{rotiereUmZ()}{rotiereUmZ()}}
+{\footnotesize\ttfamily \label{class_vektor_a578a23f6efefcd0b038609bdcb9a7f7b} 
+void Vektor::\+rotiere\+UmZ (\begin{DoxyParamCaption}\item[{const double}]{rad}{}\end{DoxyParamCaption})}
+
+
+
+Funktion, die einen \doxylink{class_vektor}{Vektor} um die Z-\/\+Achse rotiert. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rad} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_vektor_a5c2887f0690d9ffd1bba0a16bd8cc477}\index{Vektor@{Vektor}!skalarProd@{skalarProd}}
+\index{skalarProd@{skalarProd}!Vektor@{Vektor}}
+\doxysubsubsection{\texorpdfstring{skalarProd()}{skalarProd()}}
+{\footnotesize\ttfamily \label{class_vektor_a5c2887f0690d9ffd1bba0a16bd8cc477} 
+double Vektor::\+skalar\+Prod (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_vektor}{Vektor}} \&}]{input}{}\end{DoxyParamCaption}) const}
+
+
+
+Funktion, die das Skalarprodukt zweier Vektoren berechnet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\Hypertarget{class_vektor_a9e095d5d627ad26c7c2d6f227567e731}\index{Vektor@{Vektor}!sub@{sub}}
+\index{sub@{sub}!Vektor@{Vektor}}
+\doxysubsubsection{\texorpdfstring{sub()}{sub()}}
+{\footnotesize\ttfamily \label{class_vektor_a9e095d5d627ad26c7c2d6f227567e731} 
+\doxymbox{\hyperlink{class_vektor}{Vektor}} Vektor::\+sub (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_vektor}{Vektor}} \&}]{input}{}\end{DoxyParamCaption}) const}
+
+
+
+Funktion, die die Differenz zweier Vektoren berechnet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_vektor}{Vektor} 
+\end{DoxyReturn}
+\Hypertarget{class_vektor_a66d1f47d9c7f6d985f39e9f34fb3f0d5}\index{Vektor@{Vektor}!winkel@{winkel}}
+\index{winkel@{winkel}!Vektor@{Vektor}}
+\doxysubsubsection{\texorpdfstring{winkel()}{winkel()}}
+{\footnotesize\ttfamily \label{class_vektor_a66d1f47d9c7f6d985f39e9f34fb3f0d5} 
+double Vektor::\+winkel (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_vektor}{Vektor}} \&}]{input}{}\end{DoxyParamCaption}) const}
+
+
+
+Funktion, die den Winkel zwischen zwei Vektoren berechnet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Vektor.\+h\item 
+Vektor.\+cpp\end{DoxyCompactItemize}
