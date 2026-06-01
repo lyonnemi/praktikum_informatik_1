@@ -502,7 +502,7 @@ bool ganzenTestAusfuehren()
                 }
             };
 
-        int ergebnisFeld[10][8][8] {
+        int ergebnisFeld[10][8][8] = {
             {   {0, 0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0, 1, 2, 2},
@@ -634,7 +634,7 @@ bool ganzenTestAusfuehren()
 
 // ---------- TESTE MOEGLICHE ZUEGE ---------- //
     {
-        int eingabeFeld[2][8][8] {
+        int eingabeFeld[2][8][8] = {
                 {   {0, 0, 0, 0, 0, 0, 0, 0},
                     {0, 0, 0, 0, 0, 0, 0, 0},
                     {0, 0, 0, 0, 0, 0, 0, 0},
