@@ -73,10 +73,10 @@ int main()
      Geben Sie den Inhalt der gesamten
      Struktur sinnvoll aus.
      */
-    std::cout << "Nachname:     " << nBenutzer.sNachname << endl;
-    std::cout << "Vorname:      " << nBenutzer.sVorname << endl;
-    std::cout << "Geburtsjahr:  " << nBenutzer.iGeburtsjahr << endl;
-    std::cout << "Alter:        " << nBenutzer.iAlter << " Jahre" << endl;
+    std::cout << "Nachname:     " << nBenutzer.sNachname << std::endl;
+    std::cout << "Vorname:      " << nBenutzer.sVorname << std::endl;
+    std::cout << "Geburtsjahr:  " << nBenutzer.iGeburtsjahr << std::endl;
+    std::cout << "Alter:        " << nBenutzer.iAlter << " Jahre" << std::endl;
     
     /*
      jedes Element einzeln in nKopieEinzeln und

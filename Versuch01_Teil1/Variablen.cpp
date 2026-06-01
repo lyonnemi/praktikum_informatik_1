@@ -52,7 +52,7 @@ int main()
      */
 
     std::string sVorname;
-    std::string sNachname
+    std::string sNachname;
 
 
     std::cout << "Geben Sie Ihrer Vorname ein: ";
