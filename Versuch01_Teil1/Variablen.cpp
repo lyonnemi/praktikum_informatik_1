@@ -20,8 +20,17 @@ int main()
 	im Folgenden sollten Sie bei der Ausgabe immer einen entsprechenden Hinweis für den Benutzer
 	ausgeben, damit dieser weiß, was sich hinter der Ausgabe von welchen Werten verbirgt.
 	 */
-    int iErste = 0;
-    int iZweite = 0;
+
+    int iErste, iZweite;
+
+    std::cout << "Geben Sie zwei ganze Zahlen ein: " << std::endl;
+    std::cin  >> iErste;
+    std::cin  >> iZweite;
+    std::cout << " " << std::endl;
+
+
+    
+
     
     // Hier folgt Ihr eigener Code
     int iSumme = iErste + iZweite;
@@ -29,6 +38,26 @@ int main()
 
     std::cout << "iSumme: " << iSumme << std::endl;
     std::cout << "iQuotient: " << iQuotient << std::endl;
+    std::cout << "" << std::endl;
+
+
+    double dSumme = iErste + iZweite;
+    double dQuotient = iErste/iZweite; 
+
+    std::cout << "dSumme: " << dSumme << std::endl;
+    std::cout << "dQuotient: " << dQuotient << std::endl;
+    std::cout << "" << std::endl;
+
+    dSumme = (double)iErste + (double)iZweite;
+    dQuotient = (double)iErste/(double)iZweite;
+
+    std::cout << "dSumme mit Typecasting: " << dSumme << std::endl;
+    std::cout << "dQuotient mit Typecasting: " << dQuotient << std::endl;
+    std::cout << "" << std::endl;
+
+    
+    
+
 
 
     /*
@@ -36,11 +65,7 @@ int main()
 		vom Typ double und geben Sie auch diese Ergebnisse aus.
      */
 
-    double dSummeCast = iErste + iZweite;
-    double dQuotientCast = iErste/iZweite;
 
-    std::cout << "dSummeCast: " << dSummeCast << std::endl;
-    std::cout << "dQuotientCast: " << dQuotientCast << std::endl;
 
 
 
@@ -77,9 +102,7 @@ int main()
     	int iFeld[2] = {1,2};
     	std::cout << "Werten von iFeld: ";
 
-    	for (int i = 0; i < sizeof(iFeld); i++){
-    		std::cout << iFeld[i] + " ";
-    	}
+        std::cout << iFeld[0] << ", " << iFeld[1];
     	std::cout << " " << std::endl;
 
 

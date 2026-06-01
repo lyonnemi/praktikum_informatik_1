@@ -1,1 +1,0 @@
-fibonacci.o: ../fibonacci.cpp
