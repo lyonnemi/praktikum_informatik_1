@@ -50,15 +50,18 @@ int main()
                   << "(5): Datenelement löschen" << std::endl
                   << "(6): Datenelement vorne hinzufügen" << std::endl
                   << "(7): Datenelement vorne loeschen" << std::endl
-                  << "(8): Datenelement aus einer Datei sichern" << std::endl
-                  << "(9): Datenelement in eine Datei sichern" << std::endl
+                  << "(8): Datenelement aus einer Datei lesen" << std::endl
+                  << "(9): Datenelement in eine Datei schreiben" << std::endl
                   << "(0): Beenden" << std::endl;
         std::cin >> abfrage;
         std::cin.ignore(10, '\n');
 
         switch (abfrage)
         {
-            // Datenelement hinten hinzufuegen 
+            /**
+             * @brief Datenelement hinten hinzufuegen
+             * 
+             */
             case '1':
                 {
                     unsigned int matNr = 0;
@@ -84,7 +87,10 @@ int main()
                 }
                 break;
 
-            // Datenelement vorne entfernen
+            /**
+             * @brief Datenelement vorne entfernen
+             * 
+             */
             case '2':
                 {
                     if(!studentenVektor.empty())
@@ -101,7 +107,10 @@ int main()
                 }
                 break;
 
-            // Datenbank vorwaerts ausgeben
+            /**
+             * @brief Datenbank vorwaerts ausgeben
+             * 
+             */
             case '3':
                 if(!studentenVektor.empty())
                 {
@@ -115,7 +124,11 @@ int main()
                     std::cout << "Die Liste ist leer!\n\n";
                 }
                 break;
-            // Datenbank rueckwaerts ausgeben
+
+            /**
+             * @brief Datenbank rückwärts ausgeben
+             * 
+             */
             case '4':
                 if(!studentenVektor.empty())
                 {
@@ -130,7 +143,10 @@ int main()
                 }
                 break;
 
-            // Datenelement löschen
+            /**
+             * @brief Datenelement löschen
+             * 
+             */
             case '5':
                 {
                     unsigned int matrikelnummer;
@@ -147,7 +163,10 @@ int main()
                 }
                 break;
 
-            // Datenelement vorne hinzufügen
+            /**
+             * @brief Datenelement vorne hinzufügen
+             * 
+             */
             case '6':
                 {
                     unsigned int matNr = 0;
@@ -172,7 +191,12 @@ int main()
                     studentenVektor.insert(studentenVektor.begin(), student);
                 }
                 break;
-            // Datenelement vorne loeschen
+
+
+            /**
+             * @brief Datenelement vorne löschen
+             * 
+             */
             case '7':
                 {   
                     if (!studentenVektor.empty()) {
@@ -184,13 +208,14 @@ int main()
                     break;
                 }
 
-                // Datenelement aus einer Datei lesen
+            
+            /**
+             * @brief Datenelement aus einer Datei lesen
+             * 
+             */
             case '8':
                 {
-                    std::unordered_map<unsigned int, Student> studentMap; // Hashmap zur Überprüfung der Matrikelnummern
-                    for (const auto& s : studentenVektor) {
-                        studentMap[s.getMatNr()] = s; // Matrikelnummer in die Hashmap einfügen
-                    }
+                    unsigned int matNr;
                     std::string fileName;
                     std::cout << "Geben Sie die Filename ein: ";
                     std::cin >> fileName;
@@ -203,38 +228,35 @@ int main()
                         exit(1);
                     }
 
-                    while (eingabe >> matNr) {
-                        eingabe.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                        std::getline(eingabe, name);
-                        std::getline(eingabe, geburtsDatum);
-                        std::getline(eingabe, adresse);
+                    studentenVektor.clear(); // Vor dem Einlesen die Liste leeren, um Duplikate zu vermeiden
 
-                        student = Student(matNr, name, geburtsDatum, adresse);
-
-                        if (studentMap.find(matNr) != studentMap.end()) {
-                            std::cout << "Student mit Matrikelnummer " << matNr << " existiert bereits in der Liste." << std::endl;
-                            std::cout << "Möchten Sie den Studenten trotzdem hinzufügen? (j/n): ";
-                            char choice;
-                            std::cin >> choice;
-                            if (choice == 'j' || choice == 'J') {
-                                studentenVektor.push_back(student);
-                                studentMap[matNr] = student;
-                            } else {
-                                std::cout << "Student wurde nicht hinzugefügt." << std::endl;
-                            }
-                        } else {
-                            studentenVektor.push_back(student);
-                            studentMap[matNr] = student;
+                    // Lambda-Funktion, um eine Zeile einzulesen und leere Zeilen zu überspringen
+                    auto readLine = [&](std::string& target) {
+                        while (std::getline(eingabe, target)) {
+                            if (!target.empty()) break;  // stop when a non-empty line is found
                         }
+                    };
+                    
+                    while (eingabe >> matNr) {
+                        eingabe.ignore(1, '\n');
+                        readLine(name);
+                        readLine(geburtsDatum);
+                        readLine(adresse);
+                        student = Student(matNr, name, geburtsDatum, adresse);
+                        studentenVektor.push_back(student);
                     }
+
                 }
                 break;
 
-                // Datenelement in eine Datei sichern
+            /**
+             * @brief Datenelement in eine Datei sichern
+             * 
+             */
             case '9':
                 {
                     int proceed = 1; // Variable, um zu überprüfen, ob der Benutzer fortfahren möchte
-                    unsigned int matNr;
+                    int matNr;
                     std::string name, geburtsdatum, adresse, dateiName;
 
                     std::cout << "Geben Sie die Datei Name ein: ";
@@ -245,12 +267,13 @@ int main()
                     while (proceed == 1) {
                         std::cout << "Geben Sie die Matrikelnummer ein: ";
                         std::cin >> matNr;
+                        std::cin.ignore(1, '\n');
                         std::cout << "Geben Sie den Namen ein: ";
-                        std::cin >> name;
+                        std::getline(std::cin, name);
                         std::cout << "Geben Sie das Geburtsdatum ein: ";
-                        std::cin >> geburtsdatum;
+                        std::getline(std::cin, geburtsdatum);
                         std::cout << "Geben Sie die Adresse ein: ";
-                        std::cin >> adresse;
+                        std::getline(std::cin, adresse);
 
                         // Daten in die Datei schreiben
                         ausgabe << matNr << std::endl;
@@ -266,7 +289,8 @@ int main()
                     // Schließen der Datei
                     ausgabe.close();
                 }
-
+                break;
+            
             case '0':
                 std::cout << "Das Programm wird nun beendet";
                 break;
