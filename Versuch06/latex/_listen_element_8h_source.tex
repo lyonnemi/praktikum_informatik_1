@@ -1,0 +1,35 @@
+\doxysection{Listen\+Element.\+h}
+\hypertarget{_listen_element_8h_source}{}\label{_listen_element_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Praktikum\ Informatik\ 1\ MMXXVI}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ \_LISTENELEMENT\_H\_}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ \_LISTENELEMENT\_H\_}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Student.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_listen_element_aeb07fc426f550896192e207d2ea7732d}{ListenElement}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \doxymbox{\hyperlink{class_student}{Student}}\ data;}
+\DoxyCodeLine{00014\ \ \ \ \ \doxymbox{\hyperlink{class_listen_element_aeb07fc426f550896192e207d2ea7732d}{ListenElement}}*\ next;}
+\DoxyCodeLine{00015\ \ \ \ \ \doxymbox{\hyperlink{class_listen_element_aeb07fc426f550896192e207d2ea7732d}{ListenElement}}*\ prev;\textcolor{comment}{//\ Neues\ Attribut\ für\ das\ vorherige\ Element}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \doxymbox{\hyperlink{class_listen_element_aeb07fc426f550896192e207d2ea7732d}{ListenElement}}(\doxymbox{\hyperlink{class_student}{Student}}\ pData,\ \doxymbox{\hyperlink{class_listen_element_aeb07fc426f550896192e207d2ea7732d}{ListenElement}}*\ pNext);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_listen_element_a3bc021839ff8f124a4df056604cc0b93}{setData}}(\doxymbox{\hyperlink{class_student}{Student}}\ pData);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_listen_element_a13756ed466d8364c0f43aa87e8b1a0c6}{setNext}}(\doxymbox{\hyperlink{class_listen_element_aeb07fc426f550896192e207d2ea7732d}{ListenElement}}*\ pNext);}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_listen_element_a6cbd3a5732556c9ae027e2b6ac1b9fb8}{setPrev}}(\doxymbox{\hyperlink{class_listen_element_aeb07fc426f550896192e207d2ea7732d}{ListenElement}}*\ pPrev);\ \textcolor{comment}{//\ Neue\ Methode\ zum\ Setzen\ des\ vorherigen\ Elements}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \doxymbox{\hyperlink{class_student}{Student}}\ \doxymbox{\hyperlink{class_listen_element_a5026f2303a51827b5c7d6fa928413041}{getData}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ \ \ \ \ \doxymbox{\hyperlink{class_listen_element_aeb07fc426f550896192e207d2ea7732d}{ListenElement}}*\ \doxymbox{\hyperlink{class_listen_element_a34ecab2eb329046f12a0b724b2350c3a}{getNext}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ \ \ \ \ \doxymbox{\hyperlink{class_listen_element_aeb07fc426f550896192e207d2ea7732d}{ListenElement}}*\ \doxymbox{\hyperlink{class_listen_element_a34e925d310f27785c7227f76fb42549b}{getPrev}}()\ \textcolor{keyword}{const};\textcolor{comment}{//\ Neue\ Methode\ zum\ Abrufen\ des\ vorherigen\ Elements}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
